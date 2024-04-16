@@ -2,14 +2,11 @@
 @section('title','Calendario')
 
 @section('estilo')
-<link rel="stylesheet" href="{{asset('css/nav2.css')}}">
 @endsection
 
 @section('content')
-<div class="contenido">
+<div class="">
     <p>Calendario Escolar</p>
-    <div>
-    <img src="{{ asset('img/FsJSyj9TOr-Calendario-Escolar-2023-2024-90x60.jpg') }}" alt="">
+    <img src="{{ asset('img/FsJSyj9TOr-Calendario-Escolar-2023-2024-90x60.jpg') }}" alt="" class="w-full">
     </div>
-</div>
 @endsection

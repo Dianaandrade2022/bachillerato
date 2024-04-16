@@ -39,7 +39,7 @@
     @endif
 
     @if ($errors->has('deletemessage'))
-    <div class="bg-blue-300 px-4 py-2">
+    <div class="bg-blue-300 px-4 py-2 rounded-md">
         {{ $errors->first('deletemessage') }}
     </div>
     @endif
@@ -80,7 +80,6 @@
             $contador++
             @endphp
             @endforeach
-
         </tbody>
     </table>
 </div>

@@ -17,9 +17,22 @@ class AsignaturaFactory extends Factory
     public function definition()
     {
         return [
-        'asignatura'=>fake()->name(),
-        'id_maestro'=>fake()->numberBetween(1,15),
-        'id_calificacion'=>fake()->numberBetween(1,300),
+        'asignatura'=>$this->faker->randomElement([
+            'Matemáticas',
+            'Inglés',
+            'Desarrollo Web',
+            'Calcúlo Integral',
+            'Base de datos',
+            'Ciberseguridad',
+            'Organizacion del trabajo',
+            'Aplicaciones Web',
+            'Diseño',
+            'Seguridad informática',
+            'Tutoria',
+            'Algebra'
+        ]),
+        'id_maestro'=>fake()->numberBetween(1,20),
+        'semestre' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

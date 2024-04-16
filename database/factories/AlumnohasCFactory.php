@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class AlumnoFactory extends Factory
+class AlumnohasCFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,11 +17,8 @@ class AlumnoFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
-            'correo' => fake()->unique()->safeEmail(),
-            'password' => Hash::make('12345'),
-            'id_boleta'=> fake()->numberBetween(1,300),
-            'grupo' => $this->faker->randomElement(['A', 'B']),
+            'id_alumno' => fake()->numberBetween(1,300),
+            'id_calificacion'=> fake()->numberBetween(1,100),
         ];
     }
 }

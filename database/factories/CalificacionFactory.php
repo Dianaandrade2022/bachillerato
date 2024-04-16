@@ -18,6 +18,8 @@ class CalificacionFactory extends Factory
     {
         return [
             'calificacion' => fake()->randomFloat(1,5,10),
+            'parcial'=>fake()->numberBetween(1,3),
+            'id_asignatura' =>fake()->numberBetween(1,15)
         ];
     }
 }

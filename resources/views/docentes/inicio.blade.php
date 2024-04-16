@@ -13,7 +13,7 @@
     <img src="{{asset('img/inicio1.png')}}" alt="">
     <div class="titulo">
         @if(isset($maestro))
-        <h3 class="">Bienvenido, {{ $maestro->name }}</h3>
+        <h3 class="">Bienvenido Maestro, {{ $maestro->name }}</h3>
         @endif
     </div>
     <div>

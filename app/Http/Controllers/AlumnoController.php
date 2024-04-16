@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Alumno;
+use Illuminate\Support\Facades\Redirect;
 
 class AlumnoController extends Controller
 {
@@ -30,7 +31,7 @@ class AlumnoController extends Controller
                 $alumno = DB::table('alumnos')->where('id', $usuario->id)->first();
                 session(['authenticated_alumno' => true,'alumno'=>$alumno]);
                 if ($alumno) {
-                    return view('alumnos.inicio', ['alumno' => $alumno]);
+                    return Redirect::route('alumnos.inicio');
                 } else {
                     return redirect()->route('login')->withErrors(['login' => 'Datos incorrectos']);
                 }
